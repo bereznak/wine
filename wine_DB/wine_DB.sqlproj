@@ -57,6 +57,8 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Google.GData.Client">
@@ -68,5 +70,10 @@
     <Reference Include="Google.GData.Spreadsheets">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Google\Google Data API SDK\Redist\Google.GData.Spreadsheets.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Ferms.sql" />
+    <Build Include="dbo\Tables\FAdditions.sql" />
+    <Build Include="dbo\Tables\Batches.sql" />
   </ItemGroup>
 </Project>
